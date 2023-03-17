@@ -8,6 +8,7 @@ import ProtectedRoute from './utils/ProtectedRoute';
 import UrlForm from './components/UrlForm';
 import UrlGallery from './components/UrlGallery';
 import './assets/App.css';
+import Redirect from './components/redirect';
 
 
 
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login/>}></Route>
         <Route path="/register" element={<Register/>}></Route>
+        <Route path="/redirect/:shortUrl" element={<Redirect/>} />
         <Route path="/" element={<ProtectedRoute><Home/></ProtectedRoute>}>
             <Route path="urlCreation" element={<UrlForm/>}/>
             <Route path="allurl" element={<UrlGallery/>}/>

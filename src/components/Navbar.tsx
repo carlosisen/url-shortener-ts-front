@@ -17,15 +17,11 @@ const Navbar= ()=>{
     }
 
     const fetchingUrl = async () => {
-            if (urlsData.length > 0) {
-                console.log(urlsData)
-                return
-            }
             try {
                 const resp = await getAllUrl()
                 if (resp) {
                     dispatch<elementsStates["iAction"]>({
-                        type: "insertUrls",
+                        type: "updateUrl",
                         payload: resp
                     })
                 }

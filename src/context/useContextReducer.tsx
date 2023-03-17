@@ -36,6 +36,11 @@ const globalStateReducer = (state : IappStates, action: elementsStates["iAction"
                 ...state,
                 user: { ...state.user as elementsStates["iUser"], [action.payload.inputName]: action.payload.inputValue }
         }
+        case "updateUrl":
+            return{
+                ...state,
+                urlsData: action.payload
+            }
     }
 } 
 

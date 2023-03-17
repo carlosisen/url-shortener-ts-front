@@ -38,6 +38,9 @@ type IAction = {
             inputValue: string,
             elementID : string
         }
+    } | {
+        type: "updateUrl"
+        payload: IUrl[]
     }
 
 export interface elementsStates{
