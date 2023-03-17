@@ -1,10 +1,13 @@
 import { Outlet } from "react-router-dom"
+import Navbar from "./Navbar"
 
 const Home = ()=>{
 
     return(
         <div>
-            <h1>Estas en Home</h1>
+            <div className="Home-header">
+                <Navbar/>
+            </div>
             <Outlet/>
         </div>
     )

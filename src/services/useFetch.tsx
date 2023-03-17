@@ -46,6 +46,9 @@ const useFetch= ()=>{
         setLoading(true)
         try{
             const resp= await serverReq.getAllUrl()
+            if (!resp.data.length){
+                return false
+            }
             return resp.data as elementsStates["iUrl"][]
         } catch (error: any) {
             const msg = error.message
