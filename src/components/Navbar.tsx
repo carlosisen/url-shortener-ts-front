@@ -1,5 +1,4 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
 import { useGlobalContext } from "../context/appContext";
 import useFetch from "../services/useFetch";
 import { IGlobalContext, elementsStates } from "../types";
