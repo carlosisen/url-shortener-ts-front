@@ -26,9 +26,7 @@ const globalStateReducer = (state : IappStates, action: elementsStates["iAction"
                 user: action.payload as elementsStates["iUser"]
         }
         case "handleUrls":
-            // const oldUrl: elementsStates["iUrl"][] = state.urlsData.filter((url)=> url._id === action.payload.elementID )
             const stateUrl : IappStates["urlsData"] = state.urlsData.map((url) => url._id === action.payload.elementID ? { ...url, [action.payload.inputName]: action.payload.inputValue }: url) 
-            // const newUrl: elementsStates["iUrl"] = {...oldUrl[0], [action.payload.inputName]: action.payload.inputValue}
             return{
                 ...state,
                 urlsData: stateUrl
@@ -38,6 +36,11 @@ const globalStateReducer = (state : IappStates, action: elementsStates["iAction"
                 ...state,
                 user: { ...state.user as elementsStates["iUser"], [action.payload.inputName]: action.payload.inputValue }
         }
+        case "updateUrl":
+            return{
+                ...state,
+                urlsData: action.payload
+            }
     }
 } 
 

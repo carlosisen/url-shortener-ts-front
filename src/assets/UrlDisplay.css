@@ -1,0 +1,18 @@
+.UrlDisplay-div-element{
+    word-break: break-all;
+    background-color: rgba(124, 25, 151, 0.419);
+    padding: 1em;
+    border-radius: 0.5em;
+}
+.UrlDisplay-button{
+    margin: 0.4em;
+    width: fit-content;
+    font-size: 1em;
+    background-color: rgb(214, 195, 195);
+    padding: .5em;
+    border-radius: 0.5em;
+    box-shadow: 0 0 0.3em black;
+}
+.UrlDisplay-button:active{
+    box-shadow: 0 0 1em inset black;
+}
