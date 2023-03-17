@@ -21,7 +21,7 @@ const Navbar= ()=>{
                 const resp = await getAllUrl()
                 if (resp) {
                     dispatch<elementsStates["iAction"]>({
-                        type: "insertUrls",
+                        type: "updateUrl",
                         payload: resp
                     })
                 }

@@ -50,7 +50,7 @@ const UrlForm= ()=>{
                 <label className="UrlForm-label" htmlFor={"notes"}>notes:</label>
                 <input className="UrlForm-input" name={"notes"} onChange={handleChange} type={"notes"} placeholder={"comments"} value={url.notes} />
             </div>
-            {loading ? <SpinRotate /> : <button className="UrlForm-button-form" type={"submit"}>UrlForm</button>}
+            {loading ? <SpinRotate /> : <button className="UrlForm-button-form" type={"submit"}>Create your URL </button>}
             {typeof (validationMessage) !== "boolean" ?
                 <p className="UrlForm-errorValidation">{validationMessage}</p> : null}
         </form>
