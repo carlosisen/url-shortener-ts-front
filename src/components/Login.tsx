@@ -5,6 +5,7 @@ import { useGlobalContext } from "../context/appContext";
 import SpinRotate from "./SpinRotate";
 import useFetch from "../services/useFetch";
 import useValidator from "../hooks/useValidator";
+import "../assets/Login.css"
 
 
 const Login = ()=>{
@@ -44,18 +45,18 @@ const Login = ()=>{
 
     return (
         <form className="Login-form" onSubmit={handleSubmit} name={"Form"}>
-            <label htmlFor={"Form"}>Login</label>
+            <label htmlFor={"Form"} className="Login-label">Login</label>
             <div className="Login-div--mainFormData">
                 <label className="Login-label" htmlFor={"email"}>Email:</label>
                 <input className="Login-input" name={"email"} type={"email"} placeholder={"email"} onChange={handleChange} value={user.email}/>
                 <label className="Login-label" htmlFor={"password"}>Password:</label>
                 <input className="Login-input" name={"password"} onChange={handleChange} type={"password"} placeholder={"Password"} value={user.password}/>
             </div>
-            {loading ? <SpinRotate/> : <button className="Login-button-form" type={"submit"}>Login</button>}
+            {loading ? <SpinRotate/> : <button className="Login-button-form" type={"submit"}>Push to Login</button>}
             { typeof(validationMessage) !== "boolean" ? 
                 <p className="Login-errorValidation">{validationMessage}</p> : null }
             <Link to="/register">
-                <h5 className="Login-Link">Click here to <b>Register</b></h5>
+                <h5 className="Login-Link">Click here to <strong className="Login-strong">Register</strong></h5>
             </Link>
         </form>
     )

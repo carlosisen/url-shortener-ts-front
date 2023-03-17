@@ -5,6 +5,7 @@ import SpinRotate from "./SpinRotate";
 import useFetch from "../services/useFetch";
 import useValidator from "../hooks/useValidator";
 import { useGlobalContext } from "../context/appContext";
+import "../assets/Register.css"
 
 const Register = () => {
     const [user, setUser] = useState<elementsStates["iRegisterUser"]>({
@@ -43,14 +44,14 @@ const Register = () => {
 
     return (
         <form className="Register-form" onSubmit={handleSubmit} name={"Form"}>
-            <label htmlFor={"Form"}>Register</label>
+            <label htmlFor={"Form"} className="Login-label">Register</label>
             <div className="Register-div--mainFormData">
-                <label htmlFor={"name"}>Name:</label>
-                <input className="Register-input--name" name={"name"} type={"name"} placeholder={"name"} onChange={handleChange} value={user.name} />
-                <label htmlFor={"email"}>Email:</label>
-                <input className="Register-input--email" name={"email"} type={"email"} placeholder={"email"} onChange={handleChange} value={user.email} />
-                <label htmlFor={"password"}>Password:</label>
-                <input className="Register-input--password" name={"password"} onChange={handleChange} type={"password"} placeholder={"Password"} value={user.password} />
+                <label htmlFor={"name"} className="Login-label">Name:</label>
+                <input className="Register-input" name={"name"} type={"name"} placeholder={"name"} onChange={handleChange} value={user.name} />
+                <label htmlFor={"email"} className="Login-label">Email:</label>
+                <input className="Register-input" name={"email"} type={"email"} placeholder={"email"} onChange={handleChange} value={user.email} />
+                <label htmlFor={"password"} className="Login-label">Password:</label>
+                <input className="Register-input" name={"password"} onChange={handleChange} type={"password"} placeholder={"Password"} value={user.password} />
             </div>
             {loading ? <SpinRotate /> : <button className="Login-button-form" type={"submit"}>
                     Register

@@ -7,7 +7,7 @@ import validator from 'validator';
 type Tbody = elementsStates["iLoginUser"] | elementsStates["iRegisterUrl"]| elementsStates["iRegisterUser"] | elementsStates["iUrl"]
 
 const useValidator=()=>{
-    const [validationMessage, setValidationMessage]= useState<string | boolean>("pollas")
+    const [validationMessage, setValidationMessage]= useState<string | boolean>(false)
 
     const validateBody= (body : Tbody) => {
         if ("name" in body){
