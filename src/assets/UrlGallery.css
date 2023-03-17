@@ -1,0 +1,13 @@
+.UrlGallery-div{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 2fr 1.3fr 1.3fr 1.5fr 0.5fr 2fr;
+    grid-gap: 1em;
+    margin: 3em;
+    background-color: rgba(65, 65, 244, 0.619);
+    padding: 3em;
+    border-radius: 0.5em;
+}
+.UrlGallery-div-element{
+    border-bottom: 1px solid black;
+}

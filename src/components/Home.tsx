@@ -4,7 +4,7 @@ import Navbar from "./Navbar"
 const Home = ()=>{
 
     return(
-        <div>
+        <div className="Home-div">
             <div className="Home-header">
                 <Navbar/>
             </div>

@@ -1,4 +1,5 @@
 import axios from "axios"
+import { redirect } from "react-router-dom"
 import { elementsStates } from "../types"
 
 const token = window.localStorage.getItem("tokenUrl")
@@ -18,6 +19,9 @@ const serverReq={
     async getAllUrl(){
         return await axios.get(`${this.url}/chainsawurl/url/getAll?token=${token}`)
     },
+    async redirect(url: string){
+        return await axios.get(`${this.url}/chainsawurl/${url}`)
+    }
 
     
 

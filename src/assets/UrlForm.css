@@ -1,4 +1,4 @@
-.Register-form {
+.UrlForm-form{
     min-width: 50%;
     display: flex;
     flex-direction: column;
@@ -10,12 +10,11 @@
     box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.734);
     padding: 2em;
     font-size: 1.2rem;
-    color: aliceblue;
+    color:aliceblue;
     margin-top: 10%;
 
 }
-
-.Register-div--mainFormData {
+.UrlForm-div--mainFormData{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,24 +23,20 @@
     padding: 1.5em;
     border-radius: 0.5em;
 }
-
-.Register-label {
+.UrlForm-label{
     font-size: 1rem;
     font-weight: 600;
     margin: 0.4em;
 }
-
-.Register-input {
+.UrlForm-input{
     padding: 0.5em;
     border: 0.1em solid rgba(0, 0, 0, 0.458);
     border-radius: 0.5em;
 }
-
-.Register-input::placeholder {
+.UrlForm-input::placeholder{
     color: rgba(245, 245, 245, 0.67)
 }
-
-.Register-errorValidation {
+.UrlForm-errorValidation{
     font-size: 1rem;
     font-weight: 500;
     color: rgb(224, 13, 13);
@@ -49,24 +44,12 @@
     padding: 0.5em;
     border-radius: 0.5em;
 }
-
-.Login-button-form {
+.UrlForm-button-form{
     background-color: rgba(255, 235, 205, 0.578);
     padding: 0.5em;
     border-radius: 0.5em;
     box-shadow: 0 0 0.3em black;
 }
-
-.Login-button-form:active {
+.UrlForm-button-form:active{
     box-shadow: 0 0 0.5em inset black;
-}
-
-.Login-Link {
-    font-size: 0.8rem;
-}
-
-.Login-strong {
-    color: black;
-    font-size: 1rem;
-    font-weight: 600;
 }

@@ -4,6 +4,7 @@ import { useGlobalContext } from "../context/appContext";
 import SpinRotate from "./SpinRotate";
 import useFetch from "../services/useFetch";
 import useValidator from "../hooks/useValidator";
+import "../assets/UrlForm.css"
 
 const UrlForm= ()=>{
     const [url, setUrl] = useState<elementsStates["iRegisterUrl"]>({
@@ -31,6 +32,10 @@ const UrlForm= ()=>{
                 type: "insertUrls",
                 payload: resp
             })
+            setUrl({
+                url: "",
+                notes: "",
+            })
         } catch (error) {
             return
         }
@@ -38,7 +43,7 @@ const UrlForm= ()=>{
 
     return (
         <form className="UrlForm-form" onSubmit={handleSubmit} name={"Form"}>
-            <label htmlFor={"Form"}>UrlForm</label>
+            <label htmlFor={"Form"}>Create your ShortUrl</label>
             <div className="UrlForm-div--mainFormData">
                 <label className="UrlForm-label" htmlFor={"url"}>url:</label>
                 <input className="UrlForm-input" name={"url"} type={"url"} placeholder={"url"} onChange={handleChange} value={url.url} />

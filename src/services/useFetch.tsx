@@ -58,12 +58,22 @@ const useFetch= ()=>{
         }
     }
 
+    const redirect= async (url: string)=>{
+        try{
+            const resp= await serverReq.redirect(url)
+            return resp.data.redirect as string
+        }catch(error){
+            throw error
+        }
+    }
+
     return{
         loading,
         registerUser,
         registerUrl,
         loginUser,
-        getAllUrl
+        getAllUrl,
+        redirect
     }
 }
 
