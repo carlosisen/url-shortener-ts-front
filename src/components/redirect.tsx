@@ -12,7 +12,7 @@ const Redirect = ()=>{
         const resp = await redirect(shortUrl as string)
         if(typeof(resp)==="string")
         window.location.replace(resp)
-        }catch (error: any) {
+        }catch (error) {
             setMessage("there is an error with your url")
         }
 
