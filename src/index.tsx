@@ -1,4 +1,3 @@
-import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { GlobalStateWrapper } from './context/appContext';
 import { BrowserRouter } from 'react-router-dom';
@@ -10,12 +9,12 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <BrowserRouter>
       <GlobalStateWrapper>
         <App />
       </GlobalStateWrapper>
     </BrowserRouter>
-  </React.StrictMode>
+  // </React.StrictMode>
 );
 

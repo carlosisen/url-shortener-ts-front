@@ -10,11 +10,9 @@ const Redirect = ()=>{
     const redirection= async ()=>{
         try{
         const resp = await redirect(shortUrl as string)
-        console.log(resp, shortUrl)
         if(typeof(resp)==="string")
         window.location.replace(resp)
-        }catch (error: any) {
-            console.log(error)
+        }catch (error) {
             setMessage("there is an error with your url")
         }
 
