@@ -12,6 +12,7 @@ const Navbar= ()=>{
 
     const handleLogout= ()=>{
         dispatch({type: "clear"});
+        window.localStorage.removeItem("tokenUrl")
         toLogin("/login")
     }
 

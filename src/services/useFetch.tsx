@@ -21,7 +21,8 @@ const useFetch= ()=>{
     const registerUrl= async (body :elementsStates["iRegisterUrl"]) =>{
         setLoading(true)
         try{
-            const resp= await serverReq.registerUrl(body)
+            const token = window.localStorage.getItem("tokenUrl") as string
+            const resp = await serverReq.registerUrl(body, token)
             return resp.data.url
         } catch (error: any) {
             const msg = error.message
@@ -45,7 +46,8 @@ const useFetch= ()=>{
     const getAllUrl= async () =>{
         setLoading(true)
         try{
-            const resp= await serverReq.getAllUrl()
+            const token = window.localStorage.getItem("tokenUrl") as string
+            const resp = await serverReq.getAllUrl(token)
             if (!resp.data.length){
                 return false
             }

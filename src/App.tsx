@@ -13,7 +13,6 @@ import Redirect from './components/redirect';
 
 
 function App() {
-  const {appState:{user}} = useGlobalContext() as IGlobalContext
   
   return (
     <div className="App">
