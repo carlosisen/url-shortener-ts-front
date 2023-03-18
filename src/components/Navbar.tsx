@@ -1,5 +1,4 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
 import { useGlobalContext } from "../context/appContext";
 import useFetch from "../services/useFetch";
 import { IGlobalContext, elementsStates } from "../types";
@@ -13,6 +12,7 @@ const Navbar= ()=>{
 
     const handleLogout= ()=>{
         dispatch({type: "clear"});
+        window.localStorage.removeItem("tokenUrl")
         toLogin("/login")
     }
 
