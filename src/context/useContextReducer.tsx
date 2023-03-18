@@ -7,7 +7,6 @@ const initialGlobalState : IappStates= {
     urlsData: [],
 }
 
-// ponemos el :IappStates definiendo el resultado de la funcion para evitar problemas en el hook siguiente 
 
 const globalStateReducer = (state : IappStates, action: elementsStates["iAction"] ) : IappStates =>{
     switch (action.type){
